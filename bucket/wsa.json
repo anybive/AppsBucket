@@ -1,17 +1,17 @@
 {
-    "version": "2308.40000.3.0",
+    "version": "2309.40000.2.0",
     "description": "Windows Subsystem For Android™ (WSA) with Google Play Services and (or) Magisk",
     "homepage": "https://github.com/MustardChef/WSABuilds",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/MustardChef/WSABuilds/releases/download/Windows_10_2308.40000.3.0/WSA_2308.40000.3.0_x64_Release-Nightly-with-magisk-d4e552d0.26301.-canary-MindTheGapps-13.0-RemovedAmazon_Windows_10.7z",
-            "hash": "1721183f728433f75d3c9c874ee1fe16878779ed5792dc50ebd321a7395101af"
+            "url": "https://github.com/MustardChef/WSABuilds/releases/download/Windows_10_2309.40000.2.0/WSA_2309.40000.2.0_x64_Release-Nightly-with-magisk-d4e552d0.26301.-canary-MindTheGapps-13.0-RemovedAmazon_Windows_10.7z",
+            "hash": "cd85c6fa56081a3bcdc83b9bd44cf160116f25e5fa2bd6ee9d3621a3dc887cd9"
         }
     },
     "installer": {
         "file": "Install.ps1"
     },
-    "extract_dir": "WSA_2308.40000.3.0_x64_Release-Nightly-with-magisk-d4e552d0.26301.-canary-MindTheGapps-13.0-RemovedAmazon",
+    "extract_dir": "WSA_2309.40000.2.0_x64_Release-Nightly-with-magisk-d4e552d0.26301.-canary-MindTheGapps-13.0-RemovedAmazon",
     "checkver": {
         "script": [
             "$latestVerUrl = Invoke-WebRequest -Uri 'https://github.com/MustardChef/WSABuilds/releases/latest' -UseBasicParsing",
