@@ -11,7 +11,7 @@
     "installer": {
         "file": "Install.ps1"
     },
-    "extract_dir": "WSA_$version_x64",
+    "extract_dir": "WSA_2309.40000.2.0_x64",
     "checkver": {
         "script": [
             "$latestVerUrl = Invoke-WebRequest -Uri 'https://github.com/MustardChef/WSABuilds/releases/latest' -UseBasicParsing",
