@@ -17,7 +17,7 @@
             "if(!(Test-Path $PersistCache)) { New-Item $PersistCache -Type Directory -Force | Out-Null }",
             "if(Test-Path $AppCache) {",
             "    $AppDir = Get-Item $AppCache",
-            "    if($AppDir.Attributes != \"Directory, ReparsePoint\") { ",
+            "    if($AppDir.Attributes -ne \"Directory, ReparsePoint\") { ",
             "        Move-Item $AppCache $PersistCache -Force",
             "        Remove-Item $AppCache -Force -Recurse -ErrorAction SilentlyContinue",
             "        New-Item -Type Junction -Path $AppCache -Target $PersistCache | Out-Null",
