@@ -1,0 +1,30 @@
+{
+    "version": "10.9.0.7325",
+    "description": "爱奇艺-在线视频网站-海量正版高清视频在线观看",
+    "homepage": "https://www.iqiyi.com",
+    "license": "https://www.iqiyi.com/user/register/protocol.html",
+    "architecture": {
+        "32bit": {
+            "url": "https://dl-static.iqiyi.com/hz/IQIYIsetup_z42.exe",
+            "hash": ""
+        }
+    },
+    "bin": "IQIYIClient.exe",
+    "shortcuts": [
+        [
+            "IQIYIClient.exe",
+            "爱奇艺"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.iqiyi.com/appstore.html",
+        "regex": "最新版本： (?<version>[\\d.]+)[\\w\\W]*https://dl-static.iqiyi.com/hz/IQIYIsetup_z(?<subver>[\\d]+).exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://dl-static.iqiyi.com/hz/IQIYIsetup_z$matchSubver.exe"
+            }
+        }
+    }
+}
