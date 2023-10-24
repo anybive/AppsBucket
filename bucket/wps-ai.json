@@ -6,7 +6,7 @@
     "architecture": {
         "32bit": {
             "url": "https://pc-package.wpscdn.cn/wps/download/WPS_Setup_AI_15712.exe",
-            "hash": ""
+            "hash": "893bf6fb700df5583ac4bf66a95c88c27b9b916fee945f0ae2dbdd6d20dbfe34"
         }
     },
     "pre_install": [
