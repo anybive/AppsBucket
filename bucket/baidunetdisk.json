@@ -18,7 +18,7 @@
     ],
     "checkver": {
         "url": "https://yun.baidu.com/disk/cmsdata",
-        "regex": "https://issuepcdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_(?<version>[\\d.]+).exe"
+        "regex": "BaiduNetdisk_(?<version>[\\d.]+).exe"
     },
     "autoupdate": {
         "architecture": {
