@@ -34,10 +34,10 @@
         "script": [
             "$params='cmdid=3318&jprxReq[req][soft_id_list][]=24833'",
             "$ret=Invoke-WebRequest -UseBasicParsing https://luban.m.qq.com/api/public/software-manager/softwareProxy -ContentType 'application/x-www-form-urlencoded;charset=UTF-8' -Method POST -Body $params",
-            "$ret.Content -match 'https://sw.pcmgr.qq.com/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/spcmgr/download/QuarkCloudDrive-v([\\d.]+)-release-pckk@tencent_daily-([a-zA-Z0-9]+).exe'",
+            "$ret.Content -match 'https://sw.pcmgr.qq.com/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/spcmgr/download/QuarkCloudDrive-v([0-9.]+)-release-pckk@tencent_daily-([a-zA-Z0-9]+).exe'",
             "echo $matches[1] + '-' + $matches[2] + '.' + $matches[3] + '.' + $matches[4]"
         ],
-        "regex": "(?<pathx>[\\w]+)-(?<pathy>[\\w]+)-(?<version>[0-9.]+)-(?<verx>[a-z0-9.]+)"
+        "regex": "(?<pathx>[a-zA-Z0-9]+)-(?<pathy>[a-zA-Z0-9]+)-(?<version>[0-9.]+)-(?<verx>[a-zA-Z0-9]+)"
     },
     "autoupdate": {
         "url": "https://sw.pcmgr.qq.com/$matchPathx/$matchPathy/spcmgr/download/QuarkCloudDrive-v$matchVersion-release-pckk@tencent_daily-$matchVerx.exe#/dl.7z"
