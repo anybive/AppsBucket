@@ -21,10 +21,7 @@
             "clashN"
         ]
     ],
-    "checkver": {
-        "url": "https://github.com/2dust/clashN/releases/latest",
-        "regex": "/releases/tag/(<?version>[\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/2dust/clashN/releases/download/$version/clashN.zip"
     }
