@@ -31,10 +31,15 @@
         ]
     ],
     "checkver": {
-        "url": "https://pc.qq.com/detail/13/detail_24833.html",
-        "regex": "QuarkCloudDrive-v(?<version>[\\d.]+)-release-pckk@(?<ver>[\\w\\d_-]+).exe"
+        "script": [
+            "$params='cmdid=3318&jprxReq[req][soft_id_list][]=24833'",
+            "$ret=Invoke-WebRequest -UseBasicParsing https://luban.m.qq.com/api/public/software-manager/softwareProxy -ContentType 'application/x-www-form-urlencoded;charset=UTF-8' -Method POST -Body $params",
+            "$ret.Content -match 'https://sw.pcmgr.qq.com/([\\w]+)/([\\w]+)/spcmgr/download/QuarkCloudDrive-v([\\d.]+)-release-pckk@tencent_daily-([\\d]+).exe'",
+            "echo $matches[1] + '-' + $matches[2] + '.' + $matches[3] + '.' + $matches[4]"
+        ],
+        "regex": "(?<pathx>[\\w]+)-(?<pathy>[\\w]+)-(?<version>[0-9.]+)-(?<verx>[a-z0-9.]+)"
     },
     "autoupdate": {
-        "url": "https://webcdn.m.qq.com/spcmgr/download/QuarkCloudDrive-v$version-release-pckk@$matchVer.exe#/dl.7z"
+        "url": "https://sw.pcmgr.qq.com/$matchPathx/$matchPathy/spcmgr/download/QuarkCloudDrive-v$matchVersion-release-pckk@tencent_daily-$matchVerx.exe#/dl.7z"
     }
 }
