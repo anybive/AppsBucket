@@ -1,5 +1,5 @@
 {
-    "version": "2.5.55",
+    "version": "2.5.54",
     "description": "夸克网盘是夸克推出的一款云服务产品，功能包括云存储、高清看剧、文件在线解压、PDF一键转换等。通过夸克网盘可随时随地管理和使用照片、文档、手机资料，目前支持Android、iOS、PC、iPad。",
     "homepage": "https://pan.quark.cn",
     "license": "https://b.quark.cn/apps/quark_icloud_pay/routes/service_help",
@@ -31,16 +31,10 @@
         ]
     ],
     "checkver": {
-        "script": [
-            "$params='cmdid=3318&jprxReq[req][soft_id_list][]=24833'",
-            "$ret=Invoke-WebRequest -UseBasicParsing https://luban.m.qq.com/api/public/software-manager/softwareProxy -ContentType 'application/x-www-form-urlencoded;charset=UTF-8' -Method POST -Body $params",
-            "$ret.Content -match 'https://sw.pcmgr.qq.com/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/spcmgr/download/QuarkCloudDrive-v([0-9.]+)-release-pckk@tencent_daily-([a-zA-Z0-9]+).exe'",
-            "$str = $matches[1] + '-' + $matches[2] + '-' + $matches[3] + '-' + $matches[4]",
-            "echo $str"
-        ],
-        "regex": "(?<pathx>[a-zA-Z0-9]+)-(?<pathy>[a-zA-Z0-9]+)-(?<version>[0-9.]+)-(?<verx>[a-zA-Z0-9]+)"
+        "url": "https://baoku.360.cn/soft/show/appid/2000003876",
+        "regex": "https://pdds.quark.cn/download/stfile/(?<pathx>[a-zA-Z0-9]+)/QuarkCloudDrive-v(?<version>[0-9.]+)-release-pckk@360_daily-(?<verx>[0-9]+).exe"
     },
     "autoupdate": {
-        "url": "https://sw.pcmgr.qq.com/$matchPathx/$matchPathy/spcmgr/download/QuarkCloudDrive-v$matchVersion-release-pckk@tencent_daily-$matchVerx.exe#/dl.7z"
+        "url": "https://pdds.quark.cn/download/stfile/$matchPathx/QuarkCloudDrive-v$matchVersion-release-pckk@360_daily-$matchVerx.exe#/dl.7z"
     }
 }
