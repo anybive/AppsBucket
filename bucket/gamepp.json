@@ -23,6 +23,12 @@
             "Remove-Item \"$dir\\commonSdk.7z\" -Force -ErrorAction SilentlyContinue"
         ]
     },
+    "uninstaller":{
+        "script":[
+            "Remove-Item \"$env:LOCALAPPDATA\\GamePP\" -Force -Recurse -ErrorAction SilentlyContinue",
+            "Remove-Item \"$env:LOCALAPPDATA\\GamePPSdk\" -Force -Recurse -ErrorAction SilentlyContinue",
+        ]
+    },
     "bin": "GamePP.exe",
     "shortcuts": [
         [
