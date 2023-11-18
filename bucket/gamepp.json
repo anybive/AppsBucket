@@ -11,7 +11,7 @@
             "$GPPSDK = \"$env:LOCALAPPDATA\\GamePPSdk\"",
             "if(!(Test-Path $GPP)) { New-Item $GPP -Type Directory -Force | Out-Null }",
             "if(!(Test-Path $GPPSDK)) { New-Item $GPPSDK -Type Directory -Force | Out-Null }",
-            "Move-Item \"$dir\\Apps\\*\" \"$GPP\\Apps\"",
+            "Move-Item \"$dir\\Apps\" \"$GPP\\Apps\"",
             "Expand-7zipArchive \"$dir\\common.7z\" \"$GPP\"",
             "Move-Item \"$dir\\SDK\\*\" \"$GPPSDK\"",
             "Expand-7zipArchive \"$dir\\commonSdk.7z\" \"$GPPSDK\\Common\"",
