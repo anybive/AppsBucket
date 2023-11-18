@@ -14,7 +14,7 @@
             "Move-Item \"$dir\\Apps\\*\" \"$GPP\\Apps\"",
             "Expand-7zipArchive \"$dir\\common.7z\" \"$GPP\"",
             "Move-Item \"$dir\\SDK\\*\" \"$GPPSDK\"",
-            "Expand-7zipArchive \"$dir\\commonSdk.7z\" \"$GPPSDK\\vulkan\"",
+            "Expand-7zipArchive \"$dir\\commonSdk.7z\" \"$GPPSDK\\Common\"",
             "Move-Item \"$dir\\Main\\*\" \"$dir\"",
             "Remove-Item \"$dir\\Apps\" -Force -Recurse -ErrorAction SilentlyContinue",
             "Remove-Item \"$dir\\SDK\" -Force -Recurse -ErrorAction SilentlyContinue",
