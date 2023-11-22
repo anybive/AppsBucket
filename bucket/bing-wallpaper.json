@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0.0",
+    "description": "下载“必应壁纸”后，每天都用新的背景使桌面栩栩如生",
+    "homepage": "https://www.microsoft.com/zh-cn/bing/bing-wallpaper",
+    "license": "https://www.microsoft.com/zh-cn/legal/terms-of-use",
+    "url": "https://download.microsoft.com/download/2/5/2/252967a0-bd0f-4899-b1bd-1e46e19b07bf/Installer/2.0.0.4/Bing/W011/BingWallpaper.exe",
+    "hash": "9852cda93073d01dbc70d579d8aef184b2ad18be3ae25ad5c57544348fae55d9",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\$fname\" \"$dir\\extracted\" -Removal",
+        "Expand-MsiArchive \"$dir\\extracted\\BWCInstaller.msi\" \"$dir\" -ExtractDir \"$dir\" -Removal",
+        "$AppCache = \"$env:LOCALAPPDATA\\Microsoft\\BingWallpaperApp\"",
+        "$PersistCache = \"$persist_dir\\Cache\"",
+        "if(Test-Path $AppCache) {",
+        "    $AppDir = Get-Item $AppCache",
+        "    if($AppDir.Attributes -ne \"Directory, ReparsePoint\") { ",
+        "        Move-Item $AppCache $PersistCache -Force",
+        "        Remove-Item $AppCache -Force -Recurse -ErrorAction SilentlyContinue",
+        "        New-Item -Type Junction -Path $AppCache -Target $PersistCache | Out-Null",
+        "    }",
+        "} else {",
+        "    New-Item -Type Junction -Path $AppCache -Target $PersistCache | Out-Null",
+        "}"
+    ],
+    "bin": "BingWallpaperApp.exe",
+    "shortcuts": [
+        [
+            "BingWallpaperApp.exe",
+            "Bing Wallpaper"
+        ]
+    ],
+    "checkver": {
+        "script": [
+            "$latestVerUrl = Invoke-WebRequest -Uri \"https://bingwallpaper.microsoft.com/api/BWC/downloadPackage?brand=bing\" -UseBasicParsing -MaximumRedirection 0 -ErrorAction:SilentlyContinue",
+            "$latestVer = $latestVerUrl.Headers.Location.ToString() -match 'download/(?<path>[\\d\\w-/]+)/Installer/(?<version>[\\d.]+)/'",
+            "$str = $matches[1] + '-' + $matches[2]",
+            "echo $str"
+        ],
+        "regex":"(?<path>[\\d\\w-/]+)-(?<version>[\\d.]+)"
+    }
+    "autoupdate":{
+        "url": "https://download.microsoft.com/download/$matchPath/Installer/$matchVersion/Bing/W011/BingWallpaper.exe",
+    }
+}
