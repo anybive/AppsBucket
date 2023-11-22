@@ -31,12 +31,9 @@
     "checkver": {
         "script": [
             "$url = \"https://bingwallpaper.microsoft.com/api/BWC/downloadPackage?brand=bing\"",
-            "$latestVerUrl = (Invoke-WebRequest -Uri $url -UseBasicParsing -SkipHttpErrorCheck -method Get -MaximumRedirection 0 -ErrorAction:SilentlyContinue).Headers.Location",
-            "$latestVer = $latestVerUrl -match 'download/([\\d\\w-/]+)/Installer/([\\d.]+)/'",
-            "$str = $matches[1] + '-' + $matches[2]",
-            "echo $str"
+            "echo (Invoke-WebRequest -Uri $url -UseBasicParsing -SkipHttpErrorCheck -method Get -MaximumRedirection 0 -ErrorAction:SilentlyContinue).Headers.Location"
         ],
-        "regex":"(?<path>[\\d\\w-/]+)-(?<version>[\\d.]+)"
+        "regex":"download/(?<path>[\\d\\w-/]+)/Installer/(?<version>[\\d.]+)/"
     },
     "autoupdate":{
         "url": "https://download.microsoft.com/download/$matchPath/Installer/$matchVersion/Bing/W011/BingWallpaper.exe"
