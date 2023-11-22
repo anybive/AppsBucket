@@ -39,5 +39,8 @@
     "checkver": {
         "url": "https://gamepp.com",
         "regex": "<span>版本号：V</span><em>(?<version>[\\d.]+)</em>"
+    },
+    "autoupdate": {
+        "url": "https://dl2.gamepp.com:444/global/GamePP_International.exe#/dl.7z"
     }
 }
