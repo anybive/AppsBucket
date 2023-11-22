@@ -38,6 +38,6 @@
         "regex":"(?<path>[\\d\\w-/]+)-(?<version>[\\d.]+)"
     },
     "autoupdate":{
-        "url": "https://download.microsoft.com/download/$matchPath/Installer/$matchVersion/Bing/W011/BingWallpaper.exe",
+        "url": "https://download.microsoft.com/download/$matchPath/Installer/$matchVersion/Bing/W011/BingWallpaper.exe"
     }
 }
