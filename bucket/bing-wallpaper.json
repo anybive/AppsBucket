@@ -31,7 +31,7 @@
     "checkver": {
         "script": [
             "$latestVerUrl = Invoke-WebRequest -Uri \"https://bingwallpaper.microsoft.com/api/BWC/downloadPackage?brand=bing\" -UseBasicParsing -MaximumRedirection 0 -ErrorAction:SilentlyContinue",
-            "$latestVer = $latestVerUrl.Headers.Location.ToString() -match 'download/(?<path>[\\d\\w-/]+)/Installer/(?<version>[\\d.]+)/'",
+            "$latestVer = $latestVerUrl.RawContent.ToString() -match 'download/(?<path>[\\d\\w-/]+)/Installer/(?<version>[\\d.]+)/'",
             "$str = $matches[1] + '-' + $matches[2]",
             "echo $str"
         ],
