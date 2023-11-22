@@ -6,7 +6,7 @@
     "url": "https://download.microsoft.com/download/2/5/2/252967a0-bd0f-4899-b1bd-1e46e19b07bf/Installer/2.0.0.5/Bing/W011/BingWallpaper.exe#/dl.7z",
     "hash": "7befedf8d8fdcb2189254ae26f7271842127e02ab6eff659a42b3d911e5fd005",
     "installer": [
-        "Expand-MsiArchive \"$dir\\BWCInstaller.msi\" -ExtractDir \"$dir\" -Removal",
+        "Expand-MsiArchive \"$dir\\BWCInstaller.msi\" \"$dir\" -ExtractDir 'Microsoft\\BingWallpaperApp' -Removal",
         "$AppCache = \"$env:LOCALAPPDATA\\Microsoft\\BingWallpaperApp\"",
         "$PersistCache = \"$persist_dir\\Cache\"",
         "if(Test-Path $AppCache) {",
