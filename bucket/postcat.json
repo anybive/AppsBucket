@@ -6,7 +6,7 @@
         "identifier": "Apache-2.0",
         "url": "https://github.com/Postcatlab/postcat#Apache-2.0-1-ov-file"
     },
-    "url": "https://github.com/Postcatlab/postcat/releases/download/v0.5.1/Postcat-Setup-0.5.1.exe",
+    "url": "https://github.com/Postcatlab/postcat/releases/download/v0.5.1/Postcat-Setup-0.5.1.exe#/dl.7z",
     "hash": "936b6d3962df0905fb58917dca98de2cac4502c7c840013110bb802fdef7c232",
     "bin": "Postcat.exe",
     "shortcuts": [
@@ -17,6 +17,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/Postcatlab/postcat/releases/download/v$version/Postcat-Setup-$version.exe"
+        "url": "https://github.com/Postcatlab/postcat/releases/download/v$version/Postcat-Setup-$version.exe#/dl.7z"
     }
 }
