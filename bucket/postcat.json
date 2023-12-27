@@ -14,7 +14,7 @@
             "Postcat"
         ]
     ],
-    "checkver": github,
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Postcatlab/postcat/releases/download/v$version/Postcat-Setup-$version.exe"
     }
