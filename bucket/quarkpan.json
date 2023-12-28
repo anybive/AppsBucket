@@ -1,10 +1,10 @@
 {
-    "version": "2.5.55",
+    "version": "3.0.7",
     "description": "夸克网盘是夸克推出的一款云服务产品，功能包括云存储、高清看剧、文件在线解压、PDF一键转换等。通过夸克网盘可随时随地管理和使用照片、文档、手机资料，目前支持Android、iOS、PC、iPad。",
     "homepage": "https://pan.quark.cn",
     "license": "https://b.quark.cn/apps/quark_icloud_pay/routes/service_help",
-    "url": "https://pdds.quark.cn/download/stfile/eekglgnjgefiegmgg/QuarkCloudDrive-v2.5.55-release-pckk@360_daily-20231023163723.exe#/dl.7z",
-    "hash": "ed34bd28f2d9a889c28c7aed4face3406411f92c57f79abbc3c6f650d0c0e055",
+    "url": "https://pdds.quark.cn/download/stfile/qqwtqyvyuqruqsysp/QuarkCloudDrive-v3.0.7-release3-pckk@360_costore-20231222165446.exe#/dl.7z",
+    "hash": "80a193b2347ab5ba514fb325466167b7ab39db9b5665df785fbf44fab8bbc8db",
     "innosetup": true,
     "installer": {
         "script": [
