@@ -19,8 +19,8 @@
             "$latestVerWSA = $latestVerUrl.ToString() -match 'Windows_\\d+_([\\d.]+)'",
             "$exUrl = 'https://github.com/MustardChef/WSABuilds/releases/expanded_assets/Windows_10_' + $Matches[1]",
             "$latestVer = Invoke-WebRequest -Uri $exUrl -UseBasicParsing",
-            "$latestVerWSA = $latestVer.ToString() -match 'WSA_([0-9.]+)_x64_Release-Nightly-with-magisk-([a-z0-9]+).([a-z0-9]+).-canary'",
-            "$str = $matches[1] + '-' + $matches[2] + '.' + $matches[3]",
+            "$latestVerWSA = $latestVer.ToString() -match 'WSA_([0-9.]+)_x64_Release-Nightly-with-magisk-([a-z0-9.]+)-canary'",
+            "$str = $matches[1] + '-' + $matches[2]",
             "echo $str"
         ],
         "regex": "(?<version>[0-9.]+)-(?<VERY>[a-z0-9.]+)"
@@ -28,7 +28,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/MustardChef/WSABuilds/releases/download/Windows_10_$version/WSA_$version_x64_Release-Nightly-with-magisk-$matchVERY.-canary-MindTheGapps-13.0-RemovedAmazon_Windows_10.7z#/dl.7z"
+                "url": "https://github.com/MustardChef/WSABuilds/releases/download/Windows_10_$version/WSA_$version_x64_Release-Nightly-with-Magisk-$matchVERY-canary-MindTheGapps-13.0-RemovedAmazon_Windows_10.7z#/dl.7z"
             }
         },
         "extract_dir": "WSA_$version_x64"
