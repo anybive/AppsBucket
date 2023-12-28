@@ -25,7 +25,7 @@
     ],
     "checkver": {
         "url": "https://pc.qq.com/detail/1/detail_23761.html",
-        "regex": "<li>版本：(?<version>[\\d.]+)</li>"
+        "regex": "<div class=\"sys-info-value ellipsis\">\n\s+(?<version>[\\d.]+)"
     },
     "autoupdate": {
         "url": "https://webcdn.m.qq.com/spcmgr/download/WeGameSetup$matchVersion_gjwegame_0_0.exe#/dl.7z"
