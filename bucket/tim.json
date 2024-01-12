@@ -5,6 +5,9 @@
     "version": "3.4.8.22124",
     "url": "https://dldir1.qq.com/qqfile/qq/TIM3.4.8/TIM3.4.8.22124.exe#/dl.7z",
     "hash": "d9dddbce10d00d4bdc2d6959fa1afef68094829feda4323f3f241e591ef36ad0",
+    "pre_install": [
+        "Move-Item \"$dir\\Files\\*\" \"$dir\\\""
+    ],
     "shortcuts": [
         [
             "Bin\\QQScLauncher.exe",
