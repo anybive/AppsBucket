@@ -28,6 +28,6 @@
         "regex": "<div class=\"sys-info-value ellipsis\">\\n\\s+(?<version>[\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://webcdn.m.qq.com/spcmgr/download/WeGameSetup$matchVersion_gjwegame_0_0.exe#/dl.7z"
+        "url": "https://dldir1.qq.com/tgc/wegame/full/WeGameSetup$matchVersion_gjwegame_0_0.exe#/dl.7z"
     }
 }
