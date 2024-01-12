@@ -2,9 +2,9 @@
     "homepage": "https://office.qq.com、",
     "description": "TIM，QQ办公简洁版，是一款专注于团队办公协作的跨平台沟通工具。登录后，你的QQ好友都在，提供云文件、在线文档、邮件、日程、收藏等好用的办公功能，界面简洁清晰，QQ好友和消息无缝同步。",
     "license": "http://play.mobile.qq.com/yy/eim/help/serverinfo.html",
-    "version": "3.4.8.22086",
-    "url": "https://dldir1.qq.com/qqfile/qq/TIM3.4.8/TIM3.4.8.22086.exe",
-    "hash": "9e35ae8f418420fa9f61173b460b0dafd97d21467b0a724a61d06614e559dc29",
+    "version": "3.4.8.22124",
+    "url": "https://dldir1.qq.com/qqfile/qq/TIM3.4.8/TIM3.4.8.22124.exe#/dl.7z",
+    "hash": "d9dddbce10d00d4bdc2d6959fa1afef68094829feda4323f3f241e591ef36ad0",
     "shortcuts": [
         [
             "Bin\\QQScLauncher.exe",
