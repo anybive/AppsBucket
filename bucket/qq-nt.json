@@ -33,7 +33,7 @@
                 "url": "https://dldir1.qq.com/qqfile/qq/QQNT/$matchX64path/QQ$version_$matchX64subver_x64$matchX64tail.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/$matchX86path/QQ$matchX86version_$matchX86subver_x86$matchX86tail.exe#/dl.7z"
+                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/$matchX86path/QQ$version_$matchX86subver_x86$matchX86tail.exe#/dl.7z"
             }
         }
     }
