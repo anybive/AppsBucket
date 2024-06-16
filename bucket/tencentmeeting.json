@@ -37,7 +37,7 @@
                 "url": "https://updatecdn.meeting.qq.com/cos/$matchX64path/TencentMeeting_$matchX64ch_$version$matchX64tail.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://updatecdn.meeting.qq.com/cos/$matchX86path/TencentMeeting_$matchX86ch_$version$matchX86tail.exe#/dl.7z"
+                "url": "https://updatecdn.meeting.qq.com/cos/$matchX86path/TencentMeeting_$matchX86ch_$version.publish.officialwebsite.exe#/dl.7z"
             }
         }
     }
