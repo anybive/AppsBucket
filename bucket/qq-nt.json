@@ -25,15 +25,15 @@
     ],
     "checkver": {
         "url": "https://qq-web.cdn-go.cn/im.qq.com_new/f08130ba/rainbow/windowsDownloadUrl.js",
-        "regex": "QQNT/(?<x86>[\\w\\d]+)/QQ_(?<version>[\\d.]+)_(?<x86subver>[\\w\\d.]+)_x86(?<x86tail>[\\w\\d]+).exe.*QQNT/(?<x64>[\\w\\d]+)/QQ_(?<version>[\\w\\d.]+)_(?<x64subver>[\\w\\d.]+)_x64(?<x64tail>[\\w\\d]+).exe"
+        "regex": "QQNT/(?<x86path>[\\w\\d]+)/QQ_(?<version>[\\d.]+)_(?<x86subver>[\\w\\d.]+)_x86(?<x86tail>[\\w\\d]+).exe.*QQNT/(?<x64path>[\\w\\d]+)/QQ_(?<version>[\\w\\d.]+)_(?<x64subver>[\\w\\d.]+)_x64(?<x64tail>[\\w\\d]+).exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/$matchX64/QQ$version_$matchX64subver_x64$matchX64tail.exe#/dl.7z"
+                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/$matchX64path/QQ$version_$matchX64subver_x64$matchX64tail.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/$matchX86/QQ$matchX86version_$matchX86subver_x86$matchX86tail.exe#/dl.7z"
+                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/$matchX86path/QQ$matchX86version_$matchX86subver_x86$matchX86tail.exe#/dl.7z"
             }
         }
     }
