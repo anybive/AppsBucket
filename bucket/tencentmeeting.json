@@ -29,7 +29,7 @@
     ],
     "checkver": {
         "url": "https://meeting.tencent.com/web-service/query-download-info?q=[{\"package-type\":\"app\",\"channel\":\"0300000000\",\"platform\":\"windows\"},{\"package-type\":\"app\",\"channel\":\"0300000000\",\"arch\":\"x86_64\",\"platform\":\"windows\"}]&nonce=AAAAAAAAAAAAAAAA",
-        "regex": "cos/(?<x86path>[\\w\\d]+)/TencentMeeting_(?<x86ch>[\\d]+)_(?<version>[\\d.]+)(?<x86tail>[\\w\\d.]+)\\.exe.*cos/(?<x64path>[\\w\\d]+)/TencentMeeting_(?<x64ch>[\\d]+)_(?<version>[\\d.]+)(?<x64tail>[\\w\\d.]+)\\.exe"
+        "regex": "cos/(?<x86path>[\\w\\d]+)/TencentMeeting_(?<x86ch>[\\d]+)_(?<version>[\\d.]+)\\.publish\\.officialwebsite\\.exe.*cos/(?<x64path>[\\w\\d]+)/TencentMeeting_(?<x64ch>[\\d]+)_(?<version>[\\d.]+)(?<x64tail>[\\w\\d.]+)\\.exe"
     },
     "autoupdate": {
         "architecture": {
