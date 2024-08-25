@@ -31,15 +31,6 @@
         ]
     ],
     "checkver": {
-        "script": [
-            "$latestVerUrl = Invoke-WebRequest -Uri 'https://github.com/MustardChef/WSABuilds/releases/latest' -UseBasicParsing",
-            "$latestVerWSA = $latestVerUrl.ToString() -match 'Windows_\\d+_([\\d.]+)'",
-            "$exUrl = 'https://github.com/MustardChef/WSABuilds/releases/expanded_assets/Windows_10_' + $Matches[1]",
-            "$latestVer = Invoke-WebRequest -Uri $exUrl -UseBasicParsing",
-            "$latestVerWSA = $latestVer.ToString() -match 'WSA_([0-9.]+)_x64_Release-Nightly-with-magisk-([a-z0-9.]+)-canary'",
-            "$str = $matches[1] + '-' + $matches[2]",
-            "echo $str"
-        ],
         "url": "https://baoku.360.cn/soft/show/appid/2000003876",
         "regex": "<span class=\"type-info\">(?<version>[\\d.]+)</span>[\\w\\W]*<a href=\"http://(?<dlurl>[\\w\\d\\/_.]+)\\.exe.*normal-down-btn"
     },
