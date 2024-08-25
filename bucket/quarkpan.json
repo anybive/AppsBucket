@@ -32,9 +32,9 @@
     ],
     "checkver": {
         "url": "https://baoku.360.cn/soft/show/appid/2000003876",
-        "regex": "https://pdds.quark.cn/download/stfile/(?<pathx>[a-zA-Z0-9]+)/QuarkCloudDrive[-_]{1}v(?<version>[0-9.]+)[-_]{1}(?<verx>[\\(\\)\\w\\d-_@.]+).exe"
+        "regex": "down-tip.*http://(?<dlurl>[\\w\\d\\/_.]+).exe.*normal-down-btn"
     },
     "autoupdate": {
-        "url": "https://pdds.quark.cn/download/stfile/$matchPathx/QuarkCloudDrive-v$matchVersion-$matchVerx.exe#/dl.7z"
+        "url": "http://$matchDlurl.exe#/dl.7z"
     }
 }
