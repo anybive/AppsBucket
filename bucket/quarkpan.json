@@ -41,7 +41,7 @@
             "echo $str"
         ],
         "url": "https://baoku.360.cn/soft/show/appid/2000003876",
-        "regex": "<span class=\"type-info\">(?<version>[\\d.]+)3.9.1</span>.*down-tip.*http://(?<dlurl>[\\w\\d\\/_.]+).exe.*normal-down-btn"
+        "regex": "<span class=\"type-info\">(?<version>[\\d.]+)</span>.*down-tip.*http://(?<dlurl>[\\w\\d\\/_.]+).exe.*normal-down-btn"
     },
     "autoupdate": {
         "url": "http://$matchDlurl.exe#/dl.7z"
