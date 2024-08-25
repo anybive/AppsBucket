@@ -14,7 +14,7 @@
     ],
     "checkver": {
         "url": "https://yun.baidu.com/disk/cmsdata?clienttype=0&app_id=250528&web=1&do=client",
-        "regex": "url\": \"https://(?<prefix>[\\w\\d\\/_\\.]+)_(?<version>[\\d.]+)\\.exe"
+        "regex": "url\":[\\s]*\"https://(?<prefix>[\\w\\d\\/_\\.]+)_(?<version>[\\d.]+)\\.exe"
     },
     "autoupdate": {
         "url": "https://$matchPrefix_$version.exe#/dl.7z"
