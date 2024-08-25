@@ -17,6 +17,6 @@
         "regex": "url\":[\\s]*\"https://(?<prefix>[\\w\\d\\/_\\.]+)_(?<version>[\\d.]+)\\.exe"
     },
     "autoupdate": {
-        "url": "https://$matchPrefix_$version.exe#/dl.7z"
+        "url": "http://$matchPrefix_$version.exe#/dl.7z"
     }
 }
