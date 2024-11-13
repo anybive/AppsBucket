@@ -5,6 +5,7 @@
     "license": "https://b.quark.cn/apps/quark_icloud_pay/routes/service_help",
     "url": "http://big.softdl.360tpcdn.com/auto/20240929/2000003876_b2804ef9f7d0ef7f2bbfa0cd9206743f.exe#/dl.7z",
     "hash": "84dfe817be45866796105e90095fff1c84b33dad0bd9e6430db141baef6fe8a7",
+    "depends": "innounp",
     "innosetup": true,
     "installer": {
         "script": [
