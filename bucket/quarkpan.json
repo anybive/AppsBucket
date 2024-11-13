@@ -3,7 +3,7 @@
     "description": "夸克网盘是夸克推出的一款云服务产品，功能包括云存储、高清看剧、文件在线解压、PDF一键转换等。通过夸克网盘可随时随地管理和使用照片、文档、手机资料，目前支持Android、iOS、PC、iPad。",
     "homepage": "https://pan.quark.cn",
     "license": "https://b.quark.cn/apps/quark_icloud_pay/routes/service_help",
-    "url": "http://big.softdl.360tpcdn.com/auto/20240929/2000003876_b2804ef9f7d0ef7f2bbfa0cd9206743f.exe#/dl.7z",
+    "url": "http://big.softdl.360tpcdn.com/auto/20240929/2000003876_b2804ef9f7d0ef7f2bbfa0cd9206743f.exe#/dl.exe",
     "hash": "84dfe817be45866796105e90095fff1c84b33dad0bd9e6430db141baef6fe8a7",
     "depends": "innounp",
     "innosetup": true,
@@ -21,13 +21,14 @@
             "    }",
             "} else {",
             "    New-Item -Type Junction -Path $AppCache -Target $PersistCache | Out-Null",
-            "}"
+            "}",
+            "Move-Item -Path \"$dir\\app-$version\\*\" -Destination $dir -Force"
         ]
     },
     "bin": "QuarkCloudDrive.exe",
     "shortcuts": [
         [
-            "app\-$version\QuarkCloudDrive.exe",
+            "QuarkCloudDrive.exe",
             "QuarkCloudDrive"
         ]
     ],
@@ -36,6 +37,6 @@
         "regex": "<span class=\"type-info\">(?<version>[\\d.]+)</span>[\\w\\W]*<a href=\"http://(?<dlurl>[\\w\\d\\/_.]+)\\.exe.*normal-down-btn"
     },
     "autoupdate": {
-        "url": "http://$matchDlurl.exe#/dl.7z"
+        "url": "http://$matchDlurl.exe#/dl.exe"
     }
 }
