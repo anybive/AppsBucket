@@ -1,5 +1,5 @@
 {
-    "version": "9.9.16",
+    "version": "9.9.17",
     "description": "QQ Windows版 全新升级。沟通更便捷，功能更全面，不一样的QQ为你而来。",
     "homepage": "https://im.qq.com/pcqq/index.shtml",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.16_241023_x64_01.exe#/dl.7z",
-            "hash": "10cd203d0aacc295f5afbddf463accdddccbce89165306be21449a3b9ca9423f"
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.17_241210_x64_01.exe#/dl.7z",
+            "hash": "3a6593bcd85a86b4dd42011f05eec2e3462654312dcc05459430c2e06e999413"
         },
         "32bit": {
-            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.16_241023_x86_01.exe#/dl.7z",
-            "hash": "1fedb8b88bb1f52d78a930d5188ea42a40b752e2cdf305be3bc01222cf43a7fa"
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.17_241210_x86_01.exe#/dl.7z",
+            "hash": "a470c515a77d19be54844989715ec7424799474aaebee296487f142cc9453d71"
         }
     },
     "bin": "Files\\QQ.exe",
