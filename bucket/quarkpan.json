@@ -33,10 +33,17 @@
         ]
     ],
     "checkver": {
-        "url": "https://baoku.360.cn/soft/show/appid/2000003876",
-        "regex": "<span class=\"type-info\">(?<version>[\\d.]+)</span>[\\w\\W]*<a href=\"http://(?<dlurl>[\\w\\d\\/_.]+)\\.exe.*normal-down-btn"
+        "script": [
+            "$latestVerUrl = Invoke-WebRequest -Uri 'https://pan.quark.cn/api/client_version' -UseBasicParsing",
+            "$json_data = ConvertFrom-Json $latestVerUrl",
+            "$url = $json_data.data.origin_winInstallerUrl",
+            "$latestVer = $json_data.data.origin_version",
+            "$str = $latestVer + '//-//' + $url",
+            "echo $str"
+        ],
+        "regex": "(?<version>[\\d.]+)//-//(?<url>[\\s\\w\\d.]+)"    
     },
     "autoupdate": {
-        "url": "http://$matchDlurl.exe#/dl.exe"
+        "url": "$matchurl#/dl.exe"
     }
 }
