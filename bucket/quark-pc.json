@@ -9,8 +9,8 @@
     "innosetup": true,
     "installer": {
         "script": [
-            "Move-Item -Path \"$dir\\{code_GetAppExeDestName}" -Destination \"$dir\\quark.exe" -Force",
-            "Move-Item -Path \"$dir\\{code_GetAppProxyExeDestName}" -Destination \"$dir\\quark_proxy.exe" -Force"
+            "Move-Item -Path \"$dir\\{code_GetAppExeDestName}\" -Destination \"$dir\\quark.exe\" -Force",
+            "Move-Item -Path \"$dir\\{code_GetAppProxyExeDestName}\" -Destination \"$dir\\quark_proxy.exe\" -Force"
         ]
     },
     "bin": "quark.exe",
