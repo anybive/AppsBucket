@@ -24,7 +24,7 @@
         "script": [
             "$latestVerUrl = Invoke-WebRequest -Uri 'http://pan.quark.cn/api/client_version' -UseBasicParsing",
             "$latestVerQQUrl = $latestVerUrl.ToString() -match '{\"appch\":\"pcquark@drive_update\",\"arch\":\"x64\",\"channel\":\"latest\",\"percent\":100,\"platform\":\"win32\",.+?}'",
-            "$json_data = ConvertFrom-Json $Matcahes[0]",
+            "$json_data = ConvertFrom-Json $Matches[0]",
             "$url = $json_data.url",
             "$latestVer = $json_data.version",
             "$str = $latestVer + '//-//' + $url",
