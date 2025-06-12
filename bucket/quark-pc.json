@@ -30,7 +30,7 @@
             "$str = $latestVer + '//-//' + $url",
             "echo $str"
         ],
-        "regex": "(?<version>[\\d.]+)//-//(?<url>[\\s\\w\\d.]+)"    
+        "regex": "(?<version>[\\d.]+)//-//(?<url>[\\s\\w\\d-_():./]+)"    
     },
     "autoupdate": {
         "url": "$matchurl#/dl.exe"
