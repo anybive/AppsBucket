@@ -34,7 +34,7 @@
     ],
     "checkver": {
         "script": [
-            "$latestVerUrl = Invoke-WebRequest -Uri 'http://pan.quark.cn/api/client_version' -UseBasicParsing",
+            "$latestVerUrl = Invoke-WebRequest -Uri 'https://pan.quark.cn/api/client_version' -UseBasicParsing",
             "$json_data = ConvertFrom-Json $latestVerUrl",
             "$url = $json_data.data.origin_winInstallerUrl",
             "$latestVer = $json_data.data.origin_version",
