@@ -20,7 +20,7 @@
     ],
     "checkver": {
         "url": "https://accoriapi.xiaoheihe.cn/proxy/get_latest_versions/?os_type=web",
-        "regex": "\"stable\":[{\"version\":\"版本([\\d.]+)\""
+        "regex": "\"stable\":\\[{\"version\":\"版本([\\d.]+)\""
     },
     "autoupdate": {
         "architecture": {
